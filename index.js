@@ -1,8 +1,10 @@
 const express = require("express");
 const { connection } = require("./db");
 const { dataRouter } = require("./routes/data.routes");
-
+const cors = require("cors")
 const app = express();
+
+app.use(cors({origin:"*"}))
 app.use(express.json())
 app.get("/", (req, res) => {
   res.send("Home_Page");
