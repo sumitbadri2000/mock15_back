@@ -8,6 +8,13 @@ dataRouter.get("/", async (req, res) => {
   res.send(datas);
 });
 
+dataRouter.get("/destination", async (req, res) => {
+  const {location} = req.query
+  const datas = await DataModel.find({destination:location});
+  res.send(datas);
+});
+
+
 dataRouter.post("/create", async (req, res) => {
   const payload = req.body;
   try {
