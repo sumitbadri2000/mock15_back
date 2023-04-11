@@ -2,11 +2,11 @@ const mongoose = require("mongoose");
 
 const dataSchema = mongoose.Schema(
   {
-    Name: String,
-    Email_Address: String,
-    Destination: String,
-    No_travellers: Number,
-    Budget: Number,
+    name: String,
+    email: String,
+    destination: String,
+    travel: Number,
+    budget: Number,
   },
   {
     versionKey: false,
